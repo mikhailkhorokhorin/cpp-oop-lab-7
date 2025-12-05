@@ -8,6 +8,19 @@ include_directories(src/include)
 
 add_executable(lab
     src/main.cpp
+    src/core/bear.cpp
+    src/core/dungeon.cpp
+    src/core/game.cpp
+    src/core/npc_factory.cpp
+    src/core/npc.cpp
+    src/core/observer_console.cpp
+    src/core/observer_file.cpp
+    src/core/point.cpp
+    src/core/random.cpp
+    src/core/rogue.cpp
+    src/core/task_queue.cpp
+    src/core/thread_safe_cout.cpp
+    src/core/werewolf.cpp
 )
 
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
@@ -25,6 +38,33 @@ enable_testing()
 
 add_executable(tests
     src/tests/unit.cpp
+    src/tests/bear.cpp
+    src/tests/dungeon.cpp
+    src/tests/game.cpp
+    src/tests/npc_factory.cpp
+    src/tests/npc.cpp
+    src/tests/observer_console.cpp
+    src/tests/observer_file.cpp
+    src/tests/point.cpp
+    src/tests/random.cpp
+    src/tests/rogue.cpp
+    src/tests/task_queue.cpp
+    src/tests/thread_safe_cout.cpp
+    src/tests/werewolf.cpp
+
+    src/core/bear.cpp
+    src/core/dungeon.cpp
+    src/core/game.cpp
+    src/core/npc_factory.cpp
+    src/core/npc.cpp
+    src/core/observer_console.cpp
+    src/core/observer_file.cpp
+    src/core/point.cpp
+    src/core/random.cpp
+    src/core/rogue.cpp
+    src/core/task_queue.cpp
+    src/core/thread_safe_cout.cpp
+    src/core/werewolf.cpp
 )
 
 target_link_libraries(tests GTest::gtest_main)
